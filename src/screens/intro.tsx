@@ -1,0 +1,50 @@
+import {ImageBackground, Pressable, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import Styles from '../utils/style';
+import FormButton from '../components/Button';
+import Colors from '../utils/colorScheme';
+
+const Intro = () => {
+    const handlerNavigate = () => {
+        console.log('Navigate to SignUp');
+    };
+    
+  return (
+    <View style={Styles.container}>
+      <ImageBackground
+        source={require('../assets/images/intro.jpg')}
+        style={Styles.container}>
+        <View style={Styles.introCard}>
+          <Text style={[Styles.whiteText, Styles.largeText]}>
+            Increase Your Target to be healthier to continue exercise
+          </Text>
+          <Text style={[Styles.whiteText, Styles.smallText]}>
+            This application can improve yourself to have a healthy lifestyle by
+            exercise
+          </Text>
+          <FormButton title="Get Started" buttonStyle={Styles.primaryButton} onPress={handlerNavigate}/>
+          <View style={styles.flex}>
+            <Text style={Styles.whiteText}>Already have account?</Text>
+            <Pressable>
+              <Text style={styles.primaryColor}>Register</Text>
+            </Pressable>
+          </View>
+        </View>
+      </ImageBackground>
+    </View>
+  );
+};
+
+export default Intro;
+
+const styles = StyleSheet.create({
+    flex:{
+        marginTop: 15,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap:12
+    },
+    primaryColor:{
+        color:Colors.primary
+    }
+});
