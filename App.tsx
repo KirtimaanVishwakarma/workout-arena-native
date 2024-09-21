@@ -26,6 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Intro from './src/screens/intro';
 import Styles from './src/utils/style';
+import IntroTarget from './src/screens/introTarget';
+import ConditionForm from './src/screens/conditionForm1';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -39,7 +41,9 @@ function App(): React.JSX.Element {
         barStyle={'light-content'}
         backgroundColor={Styles.statusBar.backgroundColor}
       />
-      <Intro/>
+      {/* <Intro/> */}
+      {/* <IntroTarget/> */}
+      <ConditionForm/>
     </SafeAreaView>
   );
 }
