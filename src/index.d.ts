@@ -7,5 +7,6 @@ interface ButtonInterface {
     },
     textColor?: string;
     isPrimaryBtn?: boolean;
-    styles?: string;
+    btnStyles?: any;
+    btnTextStyle?: any;
 }

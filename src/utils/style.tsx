@@ -10,6 +10,9 @@ const Styles = StyleSheet.create({
     width: '100%',
     position: 'relative',
   },
+  intoContainer:{
+    
+  },
   whiteText: {
     color: 'white',
   },
@@ -68,6 +71,10 @@ const Styles = StyleSheet.create({
     color: Colors.primary,
     textAlign:'center'
   },
+  backIcon: {
+    width: 30,
+    height: 30,
+  }
 });
 
 export default Styles;
