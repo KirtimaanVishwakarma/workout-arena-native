@@ -15,6 +15,8 @@ import ConditionForm from './src/screens/conditionForm';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ScheduleForm from './src/screens/ScheduleForm';
+import Login from './src/screens/login';
+import Otp from './src/screens/otp';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -45,6 +47,20 @@ function App(): React.JSX.Element {
         }}>
         <Stack.Screen name="intro" component={Intro} />
         <Stack.Screen
+          name="login"
+          component={Login}
+          options={({navigation}) => ({
+            headerLeft: () => <BackBtn navigation={navigation} />,
+          })}
+        />
+         <Stack.Screen
+          name="otp"
+          component={Otp}
+          options={({navigation}) => ({
+            headerLeft: () => <BackBtn navigation={navigation} />,
+          })}
+        />
+        <Stack.Screen
           options={({navigation}) => ({
             headerLeft: () => <BackBtn navigation={navigation} />,
           })}
@@ -58,7 +74,7 @@ function App(): React.JSX.Element {
           name="ConditionForm"
           component={ConditionForm}
         />
-         <Stack.Screen
+        <Stack.Screen
           options={({navigation}) => ({
             headerLeft: () => <BackBtn navigation={navigation} />,
           })}

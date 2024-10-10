@@ -5,9 +5,6 @@ import FormButton from '../components/Button';
 import Colors from '../utils/colorScheme';
 
 const Intro = ({navigation}: any) => {
-  const handlerNavigate = () => {
-    console.log('Navigate to SignUp');
-  };
 
   return (
     <View style={Styles.container}>
@@ -25,7 +22,7 @@ const Intro = ({navigation}: any) => {
           <FormButton
             title="Get Started"
             buttonStyle={Styles.primaryButton}
-            onPress={handlerNavigate}
+            onPress={()=>navigation.navigate('login')}
           />
           <View style={[styles.flex, styles.registerBtn]}>
             <Text style={Styles.whiteText}>Already have account?</Text>

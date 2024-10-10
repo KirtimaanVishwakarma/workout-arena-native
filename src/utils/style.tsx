@@ -10,9 +10,6 @@ const Styles = StyleSheet.create({
     width: '100%',
     position: 'relative',
   },
-  intoContainer:{
-    
-  },
   whiteText: {
     color: 'white',
   },
